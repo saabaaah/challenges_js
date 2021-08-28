@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>A rectangle changing color continuesly each 3 sec</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		body {
+			text-align: center;
+		}
+		/* Style */
+		#rectangle {
+			text-align: center; 
+			border: red 2px solid;
+			width: 80px;
+			height: 80px;
+			margin: 50px;
+			display: inline-block;
+		}
+	</style>
+</head>
+<body>
+	<div id="rectangle"></div>
+	
+	<script >
+		var temps = 0;
+		setInterval(changer_couleur, 3000);
+		function changer_couleur(){
+			var div_1 = document.getElementById('rectangle');
+			var couleur = "red";
+			if(temps%2 == 0){
+				couleur = "blue";
+			}
+			div_1.style.borderColor = couleur;
+			temps+=3;
+		}
+
+	</script>
+</body>
+
+</html>
